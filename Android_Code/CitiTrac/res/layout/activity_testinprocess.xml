@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor"
+    android:orientation="vertical" >
+    
+ <include layout="@layout/header_layout"
+        android:id="@+id/header"/>
+
+ <LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="10dp"
+    android:layout_below="@+id/header"
+    android:layout_above="@+id/btnSubmit">
+ <TextView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:textSize="18sp"
+     android:layout_marginLeft="10dp"
+     android:textColor="@color/black"
+     android:text="Test In Process for:"
+     />
+
+ <TextView
+     android:id="@+id/checkpointName"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:textColor="@color/black"
+     android:layout_marginLeft="10dp"
+     android:textSize="22sp"
+     android:text="CheckPoint Name" />
+  <TextView
+    android:layout_width="fill_parent"
+     android:layout_height="0.5dp"
+     android:layout_marginTop="10dp"
+   	android:background="@color/black"/>
+  
+ <TextView
+    
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+   	 android:textSize="18sp"
+     android:textColor="@color/black"
+     android:layout_marginTop="10dp"
+     android:layout_marginLeft="10dp"
+     android:layout_marginBottom="10dp"
+     android:text="Please select some test case:" />
+  <ListView 
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:id="@+id/textCaseListView"
+      android:divider="@android:color/transparent"
+  	  android:dividerHeight="5dp"
+     ></ListView>
+
+</LinearLayout>
+<Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="fill_parent"
+    	android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnEndTest"
+        android:background="@drawable/btn_selector"
+        android:text="SUBMIT" 
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/white"/>
+
+ <Button
+        android:id="@+id/btnEndTest"
+        android:layout_width="fill_parent"
+    	android:layout_marginLeft="10dp"
+    	android:layout_marginRight="10dp"
+    	android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_selector"
+        android:text="End Test" 
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/white"/>
+ 
+</RelativeLayout>

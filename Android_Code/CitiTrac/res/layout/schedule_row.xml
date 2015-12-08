@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" 
+    android:padding="5dp">
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout"
+        android:layout_centerInParent="true"
+        android:layout_toLeftOf="@+id/imgDelete"  
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkpointName"
+        android:text="Name"
+        android:textColor="@color/dark_red"
+        android:textSize="20sp"
+        android:singleLine="true"
+        />
+     <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/timeOfCheck"
+        android:text="Time"
+        android:textColor="@color/black_start_grd"
+        android:textSize="16sp"
+        />
+     <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/eventDesc"
+        android:text="Event Desc"
+        android:visibility="gone"
+         android:textColor="@color/black"
+        android:textSize="16sp"
+        />
+     
+      <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/notes"
+        android:text="Notes"
+        android:textColor="@color/black_start_grd"
+        android:textSize="16sp"
+        />
+    </LinearLayout>
+    <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:src="@drawable/unselected_cb"
+        android:visibility="gone"
+        android:id="@+id/imgDelete"/>
+
+</RelativeLayout>

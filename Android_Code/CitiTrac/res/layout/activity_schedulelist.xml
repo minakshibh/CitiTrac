@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bgColor">
+    
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/header"
+        android:orientation="vertical">
+        
+        <include layout="@layout/header_layout"
+        android:id="@+id/topLayout"/>
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:id="@+id/viewList"
+            android:background="@drawable/menu_bg">
+                       <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                 android:text="View As List"
+                 android:id="@+id/textList"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            />
+        </LinearLayout>
+        
+             <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginLeft="1dp"
+            android:id="@+id/viewMap"
+            android:background="@drawable/menu_bg">
+                       <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                 android:text="View As Map"
+                 android:id="@+id/textMap"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            />
+        </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    
+	<ListView 
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:layout_below="@+id/header"
+	    android:id="@+id/scheduleListView">
+	    
+	</ListView>
+	
+	 <RelativeLayout
+           android:layout_below="@+id/header"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+          android:visibility="gone"
+          android:id="@+id/mapLayout"
+           >
+             <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+           <!--  <View
+                android:id="@+id/imageView123"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+              /> -->
+        </RelativeLayout>
+	
+</RelativeLayout>

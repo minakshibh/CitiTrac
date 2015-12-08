@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   
+   <color name="white">#ffffff</color>
+   <color name="bgColor">#efefef</color>
+   <color name="boundaryColor">#dfdfdf</color>
+   <color name="black">#000000</color>
+   <color name="grey">#6c6c6c</color>
+   <color name="red">#d90303</color>
+   <color name="dark_red">#aa0202</color>
+   <color name="black_start_grd">#414141</color>
+   <color name="black_end_grd">#262626</color>
+</resources>

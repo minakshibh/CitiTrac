@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bgColor"
+    android:orientation="vertical" >
+    
+    <RelativeLayout 
+        android:id="@+id/logoContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5">
+        
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/logo"/>
+        
+    </RelativeLayout>
+	<LinearLayout android:layout_width="fill_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="1"
+	    android:padding="10dp"
+	    android:orientation="vertical">
+	    
+	    <EditText 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:hint="Enter Guard Id"
+	        android:id="@+id/guardId"
+	        android:textColorHint="@color/grey"
+	        android:textColor="@color/black"
+	        android:textSize="18sp"
+	        android:background="@drawable/edittext_bg"/>
+	    
+	     <EditText 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:hint="Enter Pin"
+	        android:inputType="textPassword"
+	        android:id="@+id/pin"
+	        android:textColorHint="@color/grey"
+	        android:textColor="@color/black"
+	        android:textSize="18sp"
+	        android:background="@drawable/edittext_bg"/>
+
+	     <Button
+	         android:id="@+id/checkIn"
+	         android:layout_width="fill_parent"
+	         android:layout_height="wrap_content"
+	         android:layout_marginTop="20dp"
+	         android:background="@drawable/btn_selector"
+	         android:gravity="center"
+	         android:text="CHECK IN"
+	         android:textSize="16sp"
+	         android:textColor="@color/white"
+	         android:textStyle="bold" />
+
+	</LinearLayout>
+</LinearLayout>

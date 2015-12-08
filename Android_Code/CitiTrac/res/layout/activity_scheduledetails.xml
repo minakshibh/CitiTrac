@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bgColor"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header_layout" />
+
+  <!--   <TextView
+        android:id="@+id/textView_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:text="name"
+        android:textColor="@color/red"
+        android:textSize="25sp" /> -->
+
+           
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+       
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:layout_above="@+id/prefferedTime"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+         <TextView
+             android:id="@+id/prefferedTime"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentBottom="true"
+             android:layout_alignParentRight="true"
+             android:layout_gravity="right"
+             android:text="Preffered Time"
+             android:textSize="14sp" 
+             android:padding="2dp"
+              android:textColor="@color/dark_red"/>
+         
+         <ImageView 
+             android:layout_width="80dp"
+             android:layout_height="80dp"
+             android:src="@drawable/ic_launcher"
+             android:layout_alignParentTop="true"
+             android:id="@+id/scanImage"
+             android:visibility="gone"
+             android:layout_alignParentRight="true"/>
+
+   		 </RelativeLayout>
+   		 
+<ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="fill_parent"
+             android:layout_height="0dp"
+             android:padding="5dp"
+        android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+            >
+
+   <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notes : "
+            android:textStyle="bold"
+            android:textColor="@color/dark_red"
+            android:id="@+id/lblNotes"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/notes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="adsasdsac"
+            android:textSize="16sp" 
+            android:textColor="@color/black" />
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Address : "
+            android:textStyle="bold"
+             android:textColor="@color/dark_red"
+            android:textSize="14sp" />
+
+        
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="address nsdkfjk"
+            android:textSize="16sp" 
+            android:textColor="@color/black" />
+
+        <TextView
+                android:id="@+id/play_video_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Play Video"
+                android:textColor="@color/wallet_holo_blue_light"
+                android:visibility="gone"
+                android:textSize="16sp" />
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/bottomLayout">
+     
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:orientation="horizontal">
+           
+            <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/location"/>
+            <TextView
+            android:id="@+id/city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="city"
+             android:textSize="17sp" 
+              android:layout_marginLeft="5dp"
+           
+            android:textColor="@color/black" />
+
+            </LinearLayout>
+      <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            
+            android:orientation="horizontal">
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/location"/>
+        <TextView
+            android:id="@+id/state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="state"
+             android:gravity="center_vertical"
+             android:textSize="17sp" 
+            android:textColor="@color/black" />
+
+        </LinearLayout>
+        </LinearLayout>
+        
+        
+       <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:orientation="horizontal">
+           
+            <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/location"/>
+            <TextView
+            android:id="@+id/country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="country"
+              android:layout_marginLeft="5dp"
+             android:gravity="center_vertical"
+             android:textSize="17sp"  
+            android:textColor="@color/black" />
+
+            </LinearLayout>
+      <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/location"/>
+        <TextView
+            android:id="@+id/zipcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="zipcode"
+            android:gravity="center_vertical"
+             android:textSize="17sp" 
+            android:textColor="@color/black" />
+
+        </LinearLayout>
+        </LinearLayout>
+       
+       <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:orientation="horizontal">
+           
+            <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/contact"/>
+            <TextView
+            android:id="@+id/contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+              android:layout_marginLeft="5dp"
+            android:text="contact"
+             android:gravity="center_vertical"
+             android:textSize="17sp" 
+            android:textColor="@color/black" />
+
+            </LinearLayout>
+      <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/contact"/>
+        <TextView
+            android:id="@+id/altContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="altContact"
+             android:gravity="center_vertical"
+             android:textSize="17sp" 
+            android:textColor="@color/black" />
+
+        </LinearLayout>
+        </LinearLayout>
+
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:orientation="horizontal">
+           
+            <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/clock"/>
+            <TextView
+            android:id="@+id/open_timings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:layout_marginLeft="5dp"
+            android:text="open_timings"
+            android:gravity="center_vertical"
+             android:textSize="17sp" 
+            android:textColor="@color/black" />
+
+            </LinearLayout>
+      <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/clock"/>
+        <TextView
+            android:id="@+id/close_timings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="close_timings"
+             android:gravity="center_vertical"
+             android:textSize="17sp" 
+            android:textColor="@color/black" />
+
+        </LinearLayout>
+        </LinearLayout>
+       
+        </LinearLayout>
+       <Button android:layout_width="fill_parent"
+	         android:layout_height="wrap_content"
+	         android:layout_gravity="center"
+	         android:id="@+id/getDirections"
+	         android:text="Get Directions"
+	         android:textColor="@color/white"
+	          android:textStyle="bold"
+		            android:textSize="16sp"
+		            android:gravity="center"
+	         android:background="@drawable/red_btn_bg"
+	         android:layout_marginTop="20dp"/>
+ </LinearLayout>
+        </ScrollView>
+</LinearLayout>

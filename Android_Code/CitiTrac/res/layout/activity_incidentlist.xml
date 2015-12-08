@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bgColor">
+    
+    <include layout="@layout/header_layout"
+        android:id="@+id/header"/>
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/assignedCP"
+        android:layout_below="@+id/header"
+        android:textSize="18sp"
+        android:singleLine="true"
+        android:textColor="#000000"/>
+	<ListView 
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:layout_below="@+id/assignedCP"
+	    android:layout_above="@+id/sentEmailLayout"
+	    android:id="@+id/incidentListView">
+	    
+	</ListView>
+	
+	<LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sentEmailLayout"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:padding="10dp"
+        android:layout_above="@+id/urgencyLevelLayout">
+        
+	    <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center">
+        
+	        <ImageView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:id="@+id/imgEmailConfirmation"
+	            android:src="@drawable/unchecked_checkbox"/>
+	        <TextView 
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="10dp"
+	            android:textSize="14sp"
+	            android:textColor="@color/black_start_grd"
+            android:text="Send By E-mail"/>
+    	</LinearLayout>
+    
+        
+	    <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center">
+        
+	        <ImageView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:id="@+id/isMaintenance"
+	            android:src="@drawable/unchecked_checkbox"/>
+	        <TextView 
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="10dp"
+	            android:textSize="14sp"
+	            android:textColor="@color/black_start_grd"
+            android:text="Is Maintenance?"/>
+    	</LinearLayout>
+    </LinearLayout>
+	
+	<LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/urgencyLevelLayout"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="10dp"
+        android:layout_above="@+id/footer">
+        
+	    <TextView android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Select Priority Level for Maintenance"
+	        android:textColor="#000000"
+	        android:textSize="14sp"/>
+	    
+	    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        >
+	        
+	    <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center">
+        
+	        <ImageView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:id="@+id/imgLow"
+	            android:src="@drawable/unchecked_checkbox"/>
+	        <TextView 
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="10dp"
+	            android:textSize="14sp"
+	            android:textColor="@color/black_start_grd"
+            android:text="Low"/>
+    	</LinearLayout>
+    
+        
+	    <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center">
+        
+	        <ImageView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:id="@+id/imgNormal"
+	            android:src="@drawable/unchecked_checkbox"/>
+	        <TextView 
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="10dp"
+	            android:textSize="14sp"
+	            android:textColor="@color/black_start_grd"
+            android:text="Normal"/>
+    	</LinearLayout>
+    	
+	    <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center">
+        
+	        <ImageView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:id="@+id/imgCritical"
+	            android:src="@drawable/unchecked_checkbox"/>
+	        <TextView 
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="10dp"
+	            android:textSize="14sp"
+	            android:textColor="@color/black_start_grd"
+            android:text="Critical"/>
+    	</LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
+    
+	<LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/footer"
+        android:orientation="horizontal"
+        android:background="@color/black_end_grd"
+        android:layout_alignParentBottom="true">
+        <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:id="@+id/assignCheckPoint"
+            android:background="@drawable/menu_bg">
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/locate"/>
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                 android:text="Assign CheckPoint"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+           />
+        </LinearLayout>
+            
+        <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginLeft="1dp"
+            android:gravity="center"
+            android:id="@+id/sendIncident"
+            android:background="@drawable/menu_bg">
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/about"/>
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                 android:text="Report Incident"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            />
+        </LinearLayout>
+        
+        
+    </LinearLayout>
+    
+    
+</RelativeLayout>

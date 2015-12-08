@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.qrpatrol.android"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="21" />
+    <permission
+        android:name="com.qrpatrol.android.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    
+      <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+   <uses-permission android:name="android.permission.ACCESS_LOCATION"/>
+   <uses-permission android:name="android.permission.ACCESS_GPS"/>
+   <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    
+     
+    <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+ 
+    <!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+ 
+    <!-- Creates a custom permission so only this app can receive its messages. -->
+    <permission
+        android:name="com.qrpatrol.android.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+ 
+    <uses-permission android:name="com.qrpatrol.android.permission.C2D_MESSAGE" />
+ 
+    <!-- This app has permission to register and receive data message. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+ 
+    <!-- Network State Permissions to detect Internet status -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+ 
+    <!-- Permission to vibrate -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+ 
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.qrpatrol.activity.Splash"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.qrpatrol.activity.LoginActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"></activity>        
+        <activity android:name="com.qrpatrol.activity.DashboardActivity" android:screenOrientation="portrait" ></activity>
+        <activity android:name="com.qrpatrol.patrol.PatrolActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.qrpatrol.patrol.IncidentListActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.qrpatrol.schedule.ScheduleListActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.qrpatrol.schedule.ScheduleDetailsActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.qrpatrol.patrol.EventListActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.qrpatrol.schedule.LocationMapActivity" android:screenOrientation="portrait"></activity> 
+        <activity android:name="com.qrpatrol.order.OrderListActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.qrpatrol.order.OrderDetailsActivity" android:screenOrientation="portrait"></activity> 
+        <activity android:name="com.qrpatrol.order.LogListActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.qrpatrol.order.LogDetailsActivity" android:screenOrientation="portrait"></activity> 
+		<activity android:name="com.qrpatrol.patrol.EventDetailsActivity" android:screenOrientation="portrait"></activity>
+		<activity android:name="com.qrpatrol.patrol.ScanPatroluserActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"></activity>
+		<activity android:name="com.qrpatrol.patrol.MultiMediaActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"></activity>
+		<activity android:name="com.qrpatrol.order.PassLogsActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"></activity>
+		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyAyncD545s2oy_EYfjlB4Re_5_YI69C0Bg"/>
+		<activity android:name="com.qrpatrol.patrol.ImageActivity" android:screenOrientation="portrait"></activity>
+		<activity android:name="com.qrpatrol.activity.AboutUsActivity" android:screenOrientation="portrait"></activity>
+		<activity android:name="com.qrpatrol.patrol.TestInProcessActivity" android:screenOrientation="portrait"></activity>
+		<activity android:name="com.qrpatrol.activity.ForgotPassword" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"></activity>
+		<activity android:name="com.qrpatrol.activity.SettingActivity" android:screenOrientation="portrait"></activity>
+		<activity android:name="com.qrpatrol.patrol.PlayVideoActivity" android:screenOrientation="portrait" ></activity>
+		
+		   <service android:enabled="true" android:name="com.qrpatrol.patrol.MyService" /> 
+		  
+		   <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+ 
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- Receives the registration id. -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+ 
+                <category android:name="com.qrpatrol.android" />
+            </intent-filter>
+        </receiver>
+ 
+        <service android:name="com.qrpatrol.android.GCMIntentService" />
+    
+    </application>
+    
+  
+
+</manifest>

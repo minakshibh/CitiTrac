@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:orientation="vertical" >
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkpointId"
+        android:text="Name"
+        android:textColor="@color/dark_red"
+        android:textSize="20sp"
+        android:singleLine="true"
+        />
+     <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/last_updated"
+        android:text="last_updated"
+        android:textColor="@color/black_start_grd"
+        android:textSize="16sp"
+        />
+     <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/eventDesc"
+        android:text="Event Desc"
+        android:visibility="gone"
+         android:textColor="@color/black"
+        android:textSize="16sp"
+        />
+     
+      <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/description"
+        android:text="Description"
+         android:textColor="@color/black_start_grd"
+        android:textSize="16sp"
+        />
+    </LinearLayout>
+    <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:src="@drawable/unselected_cb"
+        android:visibility="gone"
+        android:id="@+id/imgDelete"/>
+
+
+</RelativeLayout>

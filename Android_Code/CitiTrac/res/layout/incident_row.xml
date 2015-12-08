@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" 
+    android:padding="7dp">
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/incidentDesc"
+        android:layout_toLeftOf="@+id/imgCheck"   
+        android:layout_centerInParent="true"
+        android:text="hkajskdj"
+        android:textColor="@color/black_start_grd"
+        android:textSize="18sp"
+        />
+    <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:src="@drawable/unchecked_checkbox"
+        android:id="@+id/imgCheck"/>
+
+</RelativeLayout>
